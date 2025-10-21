@@ -1,17 +1,92 @@
-:root{
-  --bg:#ffffff; --text:#111111; --muted:#666; --border:#eaeaea;
-  --primary:#3c55a5; --accent:#fafe5f;
-  --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.06);
+@font-face {
+  font-family: 'InterLocal';
+  src: url('../assets/fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
-*{box-sizing:border-box}
-html,body,#root{height:100%}
-body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text)}
-.container{max-width:1100px;margin:0 auto;padding:16px}
-.grid{display:grid;gap:16px}
-@media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}}
-.rtl{direction:rtl;text-align:right}
-.ltr{direction:ltr;text-align:left}
-.link{color:var(--primary);text-decoration:none}
-.link:hover{opacity:.85}
-.header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:10}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+
+@font-face {
+  font-family: 'InterLocal';
+  src: url('../assets/fonts/Inter-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666;
+  --border: #eaeaea;
+  --primary: #3c55a5;
+  --accent: #fafe5f;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'InterLocal', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+.link {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.link:hover {
+  opacity: 0.85;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
